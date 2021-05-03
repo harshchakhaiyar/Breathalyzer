@@ -423,7 +423,11 @@ Below is an image showing all the devices used and their relative pins in the so
 
 For the MQ3 Gas Sensor, you will need to solder both the PCB (separate from the sensor) and a 10K ohm resistor. The gas sensor can be soldered in any configuration that fits onto the PCB.
 
-### 7. Once all parts are connected, compile and run the following files on the MBED
+### 7. Once all parts are connected, compile and run the MBED code provided in the repository.
+The ```beer.wav``` audio file was generated using the WAVToCode application in order to play the audio clip from the mbed's memory. Documentation to create your own audio file can be found here: https://colinjs.com/wavtocode/wavtocode.htm.
+
+
+
 
 ### 8. Let the MBED stay on for at least 1 hour.
 
