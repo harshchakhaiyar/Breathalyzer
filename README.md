@@ -1,21 +1,45 @@
-# Breathalyzer
+# DrinkUp - A Breathalyzer Social Media Web App
 
 #### Team Members: Harsh Chakhaiyar and Miguel Garcia
 
+## Summary
+Are you 
+
 ## Equipment Needed:
 
-<TODO: Add exact part numbers>
+Listed below is the equipment needed as well as links to find the equipment.
 
-1. Arm MBED
+1. Arm mbed LPC1768
+https://www.sparkfun.com/products/9564
+
 2. Raspberry Pi 4
+https://www.raspberrypi.org/products/raspberry-pi-4-model-b/
+
 3. Adafruit Speaker
-4. Adafruit Class D Amp
-5. uLCD4D
-6. NFC Chip
+https://www.sparkfun.com/products/11089
+
+4. Adafruit TI TPA2005D1 Class D Amp Audio Amplifier
+https://www.sparkfun.com/products/11044
+
+5. uLCD-144-G2 128
+https://www.sparkfun.com/products/11377
+
+6. ST25DV16 NFC EEPROM
+https://www.adafruit.com/product/4701
+
 7. SPST Pushbutton
-8. 5V DC External adapter
+https://www.sparkfun.com/products/9190
+
+8. 5V DC External + Adapter
+https://www.adafruit.com/product/276?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPGUF7L0BTAu3z72EmdP19luXJz4_eb1P8Igce8QNPqRT0DSoBjZFH4aApjyEALw_wcB
+https://www.adafruit.com/product/373
+
 9. Breadboard and Jumper Wires
-10. Gas Sensor 
+
+10. MQ3 Gas Sensor + Breakout
+https://www.sparkfun.com/products/8880
+https://www.sparkfun.com/products/8891
+
 11. 10 KOhm Resistor
 
 
@@ -23,16 +47,20 @@
 
 ### 0. Acquire all of the parts. 
 
-There are essentially 3 subsystems to this project: 1) A Raspberry Pi 4 subsystem where we configure a server and serve PHP files, 2) an MBED which will be gathering data, and 3) the actual website which will take in user input via a mobile optimized web-app.
+There are essentially 3 subsystems to this project: 
+    1) A Raspberry Pi 4 subsystem where we configure a server and serve PHP files
+    2) an MBED which will be gathering data 
+    3) 3) the actual website which will take in user input via a mobile optimized web-app.
 
 ### 1. Boot up Raspberry Pi and connect it to a WiFI network
 
 The Raspberry Pi 4 takes in 5V and uses USB-C connection. You can power it through your laptop, but there might be warnings about undervoltage.
 
-If you are on GT servers, you will have to connect it to GTother through the GT LAWN website. In order to find the MAC address for the Raspberry Pi, simply use the command ```ifconfig``` and take the MAC address from ```inet``` under ```wlan0``` if you are using Wireless LAN.
-In our case, the MAC address used was ```100.70.5.11```.
+If you are on GT servers, you will have to connect it to GTother through the GT LAWN website. In order to find the MAC and IP address for the Raspberry Pi, simply use the command ```ifconfig```. You can take the MAC address and the IP address from under ```wlan0``` if you are using Wireless LAN. The MAC address will be next to ```ether``` and the IP address will be next to ```inet```.
 
-![MAC Address](https://github.com/harshchakhaiyar/Breathalyzer/img/ifconfig.png)
+In our case, the IP address used was ```100.70.5.11```.
+
+![MAC Address](./img/ifconfig.png)
 
 
 Once the Raspberry Pi and your device are connected to the same Wifi network (ie GTother), you can enable VNC Viewer if you'd like to go headless. You need to enable this on the Raspberry Pi by going to ```Preferences``` > ```Raspberry Pi Configuration``` > ```Interfaces``` and then enabling VNC.
@@ -374,14 +402,32 @@ You can actually go to the ```phpmyadmin``` page and see the values change once 
 
 That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
-### 6. Wire Breadboard with the parts listed in the following schematic.
+### 6. Wire a breadboard for the MBED with the parts listed in the following schematic.
+
+Below is an image showing all the devices used and their relative pins in the software. Note that we supply an external 5V power to the speaker, and there is an NFC chip that is not wired to anything (standalone).
+
+![Schematic with Pinout](./img/schematic.jpg)
+
+And here is a simplified block diagram of the circuit.
+![Schematic](./img/schematic_general.jpg)
+
+For the MQ3 Gas Sensor, you will need to solder both the PCB (separate from the sensor) and a 10K ohm resistor. The gas sensor can be soldered in any configuration that fits onto the PCB.
 
 ### 7. Once all parts are connected, compile and run the following files on the MBED
 
-### 8. Let the MBED stay on for at least 1 hour because this allows for the alcohol gas sensor to warm up
+### 8. Let the MBED stay on for at least 1 hour.
 
-### 9. Use X Android App to allow the NFC chip to output the correct URL.
-  1. The ip address of the PI's server can be found by running the ifconfig command on the Pi's terminal
+This allows for the alcohol gas sensor to warm up.
+
+### 9. Use the NFC Tools App to configure the NFC.
+  
+  Select ```Write``` > ```Add a record``` > ```URL```.
+  
+  Afterwards, use the following as your URL:
+  
+  ```http://Rasberry-Pi's-IP-Address/login.php``` 
+  
+  Simply contact the NFC chip with your phone for a few seconds, and it should write that URL to the tag. Now whenever your phone touches that tag for a few seconds, it will pull up the website login page automatically! How cool is that?
 
 ## Project Demo
 
