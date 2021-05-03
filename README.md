@@ -45,7 +45,7 @@ https://www.adafruit.com/product/373
 https://www.sparkfun.com/products/8880
 https://www.sparkfun.com/products/8891
 
-11. 10 KOhm Resistor
+11. 10,000 Ω resistor
 
 
 ## Development steps:
@@ -419,14 +419,15 @@ That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
 Below is an image showing all the devices used and their relative pins in the software. Note that we supply an external 5V power to the speaker, and there is an NFC chip that is not wired to anything (standalone).
 
-![Schematic with Pinout](./img/schematic.jpg)
-
-And here is a simplified block diagram of the circuit.
-![Schematic](./img/schematic_general.jpg)
+![Schematic with Pinout](./img/schematic_final.jpg)
 
 For the MQ3 Gas Sensor, you will need to solder both the PCB (separate from the sensor) and a 10K ohm resistor. The gas sensor can be soldered in any configuration that fits onto the PCB.
 
-### 7. Once all parts are connected, compile and run the following files on the MBED
+### 7. Once all parts are connected, compile and run the MBED code provided in the repository.
+The ```beer.wav``` audio file was generated using the WAVToCode application in order to play the audio clip from the mbed's memory. Documentation to create your own audio file can be found here: https://colinjs.com/wavtocode/wavtocode.htm.
+
+
+
 
 ### 8. Let the MBED stay on for at least 1 hour.
 
