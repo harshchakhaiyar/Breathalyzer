@@ -402,10 +402,10 @@ You can actually go to the ```phpmyadmin``` page and see the values change once 
 After everything's done, here's an example of how the application will look like on your phone!
 
 Login Page:
-[!App](./img/site_login.jpg)
+![App](./img/site_login.jpg)
 
 Friends Page:
-[!App](./img/site_friends.jpg)
+![App](./img/site_friends.jpg)
 
 That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
