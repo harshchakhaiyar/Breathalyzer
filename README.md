@@ -64,7 +64,7 @@ Inside of ```index.php```...
 ```
 <?php echo "hello world"; ?>
 ```
-On nano, you can save your file by simpling pressing <b>Ctrl+S</b>. To escape, use <b>Ctrl+X</b>.
+On nano, you can save your file by simply pressing <b>Ctrl+S</b>. To escape, use <b>Ctrl+X</b>.
 
 We're actually not going to be using this file, so we can remove it.
 ```
