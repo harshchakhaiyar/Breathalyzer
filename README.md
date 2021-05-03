@@ -3,7 +3,7 @@
 #### Team Members: Harsh Chakhaiyar and Miguel Garcia
 
 ## Summary
-Face it: COVID-19 has sucked out the fun of drinking with your friends due to social distancing. As a college kid however, I was stuck wondering: <i>How am I going to get peer pressured to drink without my friends being a bad influence on me?</i> Well, fear no more Fraternity brothers! <b>DrinkUp</b> is a social media web app that allows you to link your "DrinkUp Score" (proprietary score based on your BAC) to the internet for all of your friends and family to admire!
+Face it: COVID-19 has sucked out the fun of drinking with your friends due to social distancing. As a college kid however, I was stuck wondering: <i>How am I going to get peer pressured to drink without my friends being a bad influence on me?</i> Fear no more, fraternity brothers! <b>DrinkUp</b> is a social media web app that allows you to link your "DrinkUp Score" (proprietary score based on your BAC) to the internet for all of your friends and family to admire!
 
 By simply following the steps below, you too can create your own DrinkUp system.
 
