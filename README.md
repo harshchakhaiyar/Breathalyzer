@@ -424,10 +424,110 @@ Below is an image showing all the devices used and their relative pins in the so
 For the MQ3 Gas Sensor, you will need to solder both the PCB (separate from the sensor) and a 10K ohm resistor. The gas sensor can be soldered in any configuration that fits onto the PCB.
 
 ### 7. Once all parts are connected, compile and run the MBED code provided in the repository.
+
+You can compile the code using the MBED Online Compiler: https://ide.mbed.com/compiler/.
+
 The ```beer.wav``` audio file was generated using the WAVToCode application in order to play the audio clip from the mbed's memory. Documentation to create your own audio file can be found here: https://colinjs.com/wavtocode/wavtocode.htm.
 
+The only external library that you would need to add is the ```uLCD_4DGL``` library, which is linked here: https://os.mbed.com/users/4180_1/code/4DGL-uLCD-SE/.
 
+The code below essentially plays a short audio clip of a glass of beer being poured, collects your alcohol data and averages it over 10 seconds, and then prints the data onto the uLCD. Afterwards, it prompts the user to input the data onto the web app by tapping their phone onto the NFC chip.
 
+Note: The alcohol data is <b>not</b> your BAC. Actually managing to calculate BAC accurately is extremely difficult and performance will vary on any given device.
+See:https://www.dfrobot.com/blog-903.html
+Therefore, we try to keep the data standardized yet simple, by averaging the AnalogIn reading over ten seconds. This is the user's "DrinkUp Score" which does not involve running a regression on every specific device.
+
+```cpp
+#include "mbed.h"
+#include "uLCD_4DGL.h"
+#include "beer.h"
+#define sample_freq 65535.0
+
+uLCD_4DGL uLCD(p9, p10, p11);
+DigitalIn pb(p20);
+AnalogIn alcohol(p16);
+PwmOut mySpeaker(p21);
+
+Ticker sampletick;
+
+int j = 0;
+
+void audio_sample(){
+    mySpeaker = data[j]/255.0; //data is from beer_sound.h
+    j++;
+    if (j>=NUM_ELEMENTS){
+        j=0;
+        sampletick.detach();    
+    }
+}
+
+// end of audio for beer noise
+
+double timer_and_sample() {
+    double alcohol_sum = 0.0;
+    // Display countdown timer
+    uLCD.color(RED);
+    uLCD.text_height(6);
+    uLCD.text_width(6);
+    for (int i = 10; i > 0; i--) {
+        uLCD.filled_rectangle(0, 0, 128, 128, BLACK);
+        uLCD.locate(1,1);
+        uLCD.printf("%d", i);
+        alcohol_sum += alcohol.read();      
+        printf("%0.2f\n", alcohol.read());
+        if (i != 1) wait(1); 
+    }
+    uLCD.filled_rectangle(0, 0, 128, 128, BLACK);   
+    return alcohol_sum / 10.0;
+}    
+
+void display_welcome() {
+    uLCD.color(WHITE);
+    uLCD.text_width(2);
+    uLCD.text_height(2);
+    uLCD.locate(1,2);
+    uLCD.printf("Welcome!\n");
+    uLCD.text_width(1);
+    uLCD.text_height(1);
+    uLCD.locate(1,8);
+    uLCD.printf("Press the button\n to start");   
+}
+
+int main() {
+    
+    //mySpeaker.PlaySong(note,duration);
+    mySpeaker.period(1.0/250000.0);
+    sampletick.attach(&audio_sample, 1.0/sample_freq);
+    wait(2.0);
+    pb.mode(PullUp);
+    display_welcome();
+    double sensor_reading;
+    int target = !pb, display_percentage;
+    while (1) {
+        if (pb == target) {
+            target = !target;
+            sensor_reading = timer_and_sample();
+            display_percentage = sensor_reading*100;
+            uLCD.text_width(1);
+            uLCD.text_height(1);
+            uLCD.locate(3,2);
+            uLCD.color(WHITE);
+            uLCD.printf("DrinkUp"); 
+            uLCD.locate(3,4);
+            uLCD.printf("Score");
+            uLCD.locate(3,6);
+            uLCD.printf("%d", display_percentage);
+            uLCD.locate(3,8);
+            if (display_percentage < 50) {
+                uLCD.printf("You are sober!");
+            } else {
+                uLCD.printf("You drunk?");
+            }
+            
+        }   
+    }
+}
+```
 
 ### 8. Let the MBED stay on for at least 1 hour.
 
