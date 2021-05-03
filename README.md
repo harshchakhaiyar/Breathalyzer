@@ -3,7 +3,6 @@
 #### Team Members: Harsh Chakhaiyar and Miguel Garcia
 
 ## Summary
-Are you 
 
 ## Equipment Needed:
 
@@ -399,6 +398,14 @@ $sql = "SELECT id, sensor, User, Location FROM SensorData";
 You can actually go to the ```phpmyadmin``` page and see the values change once you've logged in!
 
 ### 5. Add images to the RPI4 server. In the code we created a directory named ```img/img/``` and named each file after a user in the database.
+
+After everything's done, here's an example of how the application will look like on your phone!
+
+Login Page:
+[!App](./img/site_login.jpg)
+
+Friends Page:
+[!App](./img/site_friends.jpg)
 
 That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
