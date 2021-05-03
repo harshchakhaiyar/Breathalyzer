@@ -3,7 +3,12 @@
 #### Team Members: Harsh Chakhaiyar and Miguel Garcia
 
 ## Summary
-Are you 
+Face it: COVID-19 has sucked out the fun of drinking with your friends due to social distancing. As a college kid however, I was stuck wondering: <i>How am I going to get peer pressured to drink without my friends being a bad influence on me?</i> Fear no more, fraternity brothers! <b>DrinkUp</b> is a social media web app that allows you to link your "DrinkUp Score" (proprietary score based on your BAC) to the internet for all of your friends and family to admire!
+
+By simply following the steps below, you too can create your own DrinkUp system.
+
+Using the system is super easy. Simply power on the device and begin blowing once the 10 second timer begins. Afterwards, simply tap the NFC chip to your cell phone in order to open up the web app (no download needed!). You can input your "DrinkUp Score" once on the page, and you can compare it with your friends!
+
 
 ## Equipment Needed:
 
@@ -399,6 +404,14 @@ $sql = "SELECT id, sensor, User, Location FROM SensorData";
 You can actually go to the ```phpmyadmin``` page and see the values change once you've logged in!
 
 ### 5. Add images to the RPI4 server. In the code we created a directory named ```img/img/``` and named each file after a user in the database.
+
+After everything's done, here's an example of how the application will look like on your phone!
+
+Login Page:
+![App](./img/site_login.jpg)
+
+Friends Page:
+![App](./img/site_friends.jpg)
 
 That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
