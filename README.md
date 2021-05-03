@@ -45,7 +45,7 @@ https://www.adafruit.com/product/373
 https://www.sparkfun.com/products/8880
 https://www.sparkfun.com/products/8891
 
-11. 10 KOhm Resistor
+11. 10,000 Ω resistor
 
 
 ## Development steps:
