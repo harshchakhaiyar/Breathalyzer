@@ -3,6 +3,12 @@
 #### Team Members: Harsh Chakhaiyar and Miguel Garcia
 
 ## Summary
+Face it: COVID-19 has sucked out the fun of drinking with your friends due to social distancing. As a college kid however, I was stuck wondering: <i>How am I going to get peer pressured to drink without my friends being a bad influence on me?</i> Well, fear no more Fraternity brothers! <b>DrinkUp</b> is a social media web app that allows you to link your "DrinkUp Score" (proprietary score based on your BAC) to the internet for all of your friends and family to admire!
+
+By simply following the steps below, you too can create your own DrinkUp system.
+
+Using the system is super easy. Simply power on the device and begin blowing once the 10 second timer begins. Afterwards, simply tap the NFC chip to your cell phone in order to open up the web app (no download needed!). You can input your "DrinkUp Score" once on the page, and you can compare it with your friends!
+
 
 ## Equipment Needed:
 
