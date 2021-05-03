@@ -419,10 +419,7 @@ That's everything for the Raspberry Pi 4. Now we can move onto the MBED.
 
 Below is an image showing all the devices used and their relative pins in the software. Note that we supply an external 5V power to the speaker, and there is an NFC chip that is not wired to anything (standalone).
 
-![Schematic with Pinout](./img/schematic.jpg)
-
-And here is a simplified block diagram of the circuit.
-![Schematic](./img/schematic_general.jpg)
+![Schematic with Pinout](./img/schematic_final.jpg)
 
 For the MQ3 Gas Sensor, you will need to solder both the PCB (separate from the sensor) and a 10K ohm resistor. The gas sensor can be soldered in any configuration that fits onto the PCB.
 
