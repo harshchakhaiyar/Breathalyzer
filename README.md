@@ -32,6 +32,9 @@ The Raspberry Pi 4 takes in 5V and uses USB-C connection. You can power it throu
 If you are on GT servers, you will have to connect it to GTother through the GT LAWN website. In order to find the MAC address for the Raspberry Pi, simply use the command ```ifconfig``` and take the MAC address from ```inet``` under ```wlan0``` if you are using Wireless LAN.
 In our case, the MAC address used was ```100.70.5.11```.
 
+![MAC Address](https://github.com/harshchakhaiyar/Breathalyzer/img/ifconfig.png)
+
+
 Once the Raspberry Pi and your device are connected to the same Wifi network (ie GTother), you can enable VNC Viewer if you'd like to go headless. You need to enable this on the Raspberry Pi by going to ```Preferences``` > ```Raspberry Pi Configuration``` > ```Interfaces``` and then enabling VNC.
 
 ### 2. Setup Raspberry Pi LAMP Server.
