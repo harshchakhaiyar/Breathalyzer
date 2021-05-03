@@ -543,6 +543,8 @@ This allows for the alcohol gas sensor to warm up.
   
   Simply contact the NFC chip with your phone for a few seconds, and it should write that URL to the tag. Now whenever your phone touches that tag for a few seconds, it will pull up the website login page automatically! How cool is that?
 
+For 2 people working on this project, it took us approximately 30 hours of work to implement. Hopefully this tutorial can cut down on that time for you all :)
+
 ## Project Demo
 
 ## Presentation
