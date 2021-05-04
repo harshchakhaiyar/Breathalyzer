@@ -78,9 +78,10 @@ Once the Raspberry Pi and your device are connected to the same Wifi network (ie
 pi@raspberrypi:~ $ sudo apt update && sudo apt upgrade -y
 pi@raspberrypi:~ $ sudo apt install apache2 -y
 ```
-To verify:
 
 ```
+To verify:
+
 pi@raspberrypi:~ $ cd /var/www/html
 pi@raspberrypi:/var/www/html $ ls -al
 
