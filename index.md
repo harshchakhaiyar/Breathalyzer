@@ -79,15 +79,18 @@ pi@raspberrypi:~ $ sudo apt update && sudo apt upgrade -y
 pi@raspberrypi:~ $ sudo apt install apache2 -y
 ```
 To verify:
+
 ```
 pi@raspberrypi:~ $ cd /var/www/html
 pi@raspberrypi:/var/www/html $ ls -al
 
 index.html
 ```
+
 The ```/var/www/html``` directory is where we'll be doing most of the work. 
 
 - Secondly, we need to install PHP on the Raspberry Pi for our dynamic website we will be building.
+
 ```
 pi@raspberrypi:/var/www/html $ sudo apt install php -y
 ```
