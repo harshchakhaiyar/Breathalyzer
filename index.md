@@ -18,33 +18,23 @@ Listed below is the equipment needed as well as links to find the equipment.
 
 1. <a href = "https://www.sparkfun.com/products/9564">Arm mbed LPC1768</a>
 
-2. Raspberry Pi 4
-https://www.raspberrypi.org/products/raspberry-pi-4-model-b/
+2. <a href = "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4</a>
 
-3. Adafruit Speaker
-https://www.sparkfun.com/products/11089
+3. <a href = "https://www.sparkfun.com/products/11089">Adafruit Speaker</a>
 
-4. Adafruit TI TPA2005D1 Class D Amp Audio Amplifier
-https://www.sparkfun.com/products/11044
+4. <a href = "https://www.sparkfun.com/products/11044">Adafruit TI TPA2005D1 Class D Amp Audio Amplifier</a>
 
-5. uLCD-144-G2 128
-https://www.sparkfun.com/products/11377
+5. <a href = "https://www.sparkfun.com/products/11377">uLCD-144-G2 128</a>
 
-6. ST25DV16 NFC EEPROM
-https://www.adafruit.com/product/4701
+6. <a href = "https://www.adafruit.com/product/4701">ST25DV16 NFC EEPROM</a>
 
-7. SPST Pushbutton
-https://www.sparkfun.com/products/9190
+7. <a href = "https://www.sparkfun.com/products/9190">SPST Pushbutton</a>
 
-8. 5V DC External + Adapter
-https://www.adafruit.com/product/276?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPGUF7L0BTAu3z72EmdP19luXJz4_eb1P8Igce8QNPqRT0DSoBjZFH4aApjyEALw_wcB
-https://www.adafruit.com/product/373
+8. <a href = "https://www.adafruit.com/product/276?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPGUF7L0BTAu3z72EmdP19luXJz4_eb1P8Igce8QNPqRT0DSoBjZFH4aApjyEALw_wcB">5V DC External</a> +  <a href = "https://www.adafruit.com/product/373">Adapter</a>
 
 9. Breadboard and Jumper Wires
 
-10. MQ3 Gas Sensor + Breakout
-https://www.sparkfun.com/products/8880
-https://www.sparkfun.com/products/8891
+10. <a href = "https://www.sparkfun.com/products/8880">MQ3 Gas Sensor</a> + <a href = "https://www.sparkfun.com/products/8891">Breakout</a>
 
 11. 10,000 Ω resistor
 
