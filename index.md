@@ -9,7 +9,7 @@ By simply following the steps below, you too can create your own DrinkUp system.
 
 Using the system is super easy. Simply power on the device and begin blowing once the 10 second timer begins. Afterwards, simply tap the NFC chip to your cell phone in order to open up the web app (no download needed!). You can input your "DrinkUp Score" once on the page, and you can compare it with your friends!
 
-<img src="./img/device.jpg"></img>
+<img src="img/device.png" alt="hi" class="inline"/>
 
 
 ## Equipment Needed:
