@@ -46,7 +46,7 @@ Listed below is the equipment needed as well as links to find the equipment.
 There are essentially 3 subsystems to this project: 
     1) A Raspberry Pi 4 subsystem where we configure a server and serve PHP files
     2) an MBED which will be gathering data 
-    3) 3) the actual website which will take in user input via a mobile optimized web-app.
+    3) the actual website which will take in user input via a mobile optimized web-app.
 
 ### 1. Boot up Raspberry Pi and connect it to a WiFI network
 
