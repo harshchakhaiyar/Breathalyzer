@@ -548,5 +548,8 @@ This allows for the alcohol gas sensor to warm up to provide the most accurate r
 For 2 people working on this project, it took us approximately 30 hours of work to implement. Hopefully this tutorial can cut down on that time for you all :)
 
 ## Project Demo
+Link to project demo:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bveX5pt5oaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Presentation
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xL_lxNnteMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
