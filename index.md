@@ -19,7 +19,6 @@ Listed below is the equipment needed as well as links to find the equipment.
 1. <a href = "https://www.sparkfun.com/products/9564">Arm mbed LPC1768</a>
 
 2. Raspberry Pi 4
-<br>
 https://www.raspberrypi.org/products/raspberry-pi-4-model-b/
 
 3. Adafruit Speaker
