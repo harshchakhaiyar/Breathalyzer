@@ -533,7 +533,7 @@ int main() {
 
 ### 8. Let the MBED stay on for at least 1 hour.
 
-This allows for the alcohol gas sensor to warm up.
+This allows for the alcohol gas sensor to warm up to provide the most accurate readings possible.
 
 ### 9. Use the NFC Tools App to configure the NFC.
   
